@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: black;
+            font-size: 1em;
+            color: red;
+        }
+
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        input {
+            padding: 8px;
+            background-color: rgb(214, 188, 188);
+            color: blue;
+        }
+
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sign UP</h1>
+    <div id="main">
+        <form onSubmit="submitForm(event)">
+            <input type="text" id="username" placeholder="username" onInput="inputValid()" required>
+            <span class="error"></span></br></br>
+
+            <input type="password" id="password" placeholder="password" onInput="checkPass()" required>
+            <span class="error"></span></br></br>
+
+            <input type="text" id="email" placeholder="email" onInput="checkEmail()" required>
+            <span class="error"></span></br></br>
+
+            <input type="submit" value="create">
+        </form></br>
+        <span style="color:blue;font-size: 25px;"
+            onClick="window.location.assign('./pages/login/login.html')">login</span>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

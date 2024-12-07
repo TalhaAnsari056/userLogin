@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: black;
+            font-size: 1em;
+            color: red;
+        }
+
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        input {
+            padding: 8px;
+            background-color: rgb(214, 188, 188);
+            color: blue;
+        }
+
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Login</h1>
+    <div id="main">
+        <form onSubmit="submitForm(event)">
+            <input type="text" placeholder="email" onInput="checkEmail()" id="email" required>
+            <span class="error"></span></br></br>
+
+            <input type="password" id="password" placeholder="password" onInput="checkPass()" required>
+            <span class="error"></span></br></br>
+
+            <input type="submit" value="login">
+        </form><br>
+
+
+        <span style="color:blue;font-size: 25px;" onClick="window.location.assign('../../index.html')">sign up</span>
+    </div>
+
+
+    <script src="./login.js"></script>
+</body>
+
+</html>
